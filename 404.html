@@ -68,6 +68,10 @@
 
   
   
+    
+<link rel="stylesheet" href="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.css" integrity="sha384-tLMkTWh2pfXNWGFlUS0w1TFtRG5xZ9lPWFOooj+vDDLIL+xBGQU&#x2F;voDBY5XE2lVh" crossorigin="anonymous">
+
+  
   
 <meta name="generator" content="Hexo 7.3.0"></head>
 
@@ -414,25 +418,40 @@
 
 
 
-
+  
+<script src="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.js" integrity="sha384-gdGYZwHnfJM54evoZhpO0s6ZF5BQiybkiyW7VXr+h5UfruuRL&#x2F;aORyw+5+HZoU6e" crossorigin="anonymous"></script>
 
   
-  <script>
-    var isMobile = window.matchMedia('(max-width: 959px)').matches;
-    if (isMobile) {
-      const meting = _$('meting-js');
-      if (meting) {
-        meting.setAttribute('fixed', 'true');
-        const aside = meting.parentNode;
-        if (aside?.tagName === 'ASIDE') {
-          aside.removeChild(meting);
-          document.body.appendChild(meting);
+    <script>
+      var isMobile = window.matchMedia('(max-width: 959px)').matches;
+      if (isMobile) {
+      const aplayer = _$('#aplayer');
+        if (aplayer) {
+          const aside = aplayer.parentNode;
+          if (aside?.tagName === 'ASIDE') {
+            aplayer.removeAttribute('data-aos');
+            aside.removeChild(aplayer);
+            document.body.appendChild(aplayer);
+          }
         }
       }
-    }
-  </script>
+      const ap = new APlayer({
+        theme: "var(--color-link)",
+        container: document.getElementById('aplayer'),
+        audio: [{"name":"砕月","artist":"あすとらるTrip","url":"http://music.163.com/song/media/outer/url?id=1388995746.mp3","cover":"http://p2.music.126.net/ghI50WOBiP9dGViTqSzZWw==/109951164346435937.jpg?param=130y130","lrc":"lrc1.lrc","theme":"#ebd0c2"},{"name":"Fallen Angel","artist":"Aimee b / ☆Taku Takahashi","url":"http://music.163.com/song/media/outer/url?id=4930083.mp3","cover":"http://p1.music.126.net/K4hEh9OT_j51RV-yZpCvDQ==/109951170423383889.jpg?param=130y130","lrc":"lrc1.lrc","theme":"#ebd0c2"},{"name":"下等马 (洛天依)","artist":"洛天依Official","url":"http://music.163.com/song/media/outer/url?id=2709782550.mp3","cover":"http://p2.music.126.net/TPJ5f1o6WaWzKwHD1hJ19Q==/109951171126463467.jpg?param=130y130","lrc":"lrc1.lrc","theme":"#ebd0c2"},{"name":"砕月","artist":"あすとらるTrip","url":"http://music.163.com/song/media/outer/url?id=1388995746.mp3","cover":"http://p2.music.126.net/ghI50WOBiP9dGViTqSzZWw==/109951164346435937.jpg?param=130y130","lrc":"lrc1.lrc","theme":"#ebd0c2"},{"name":"胎児の夢","artist":"めらみぽっぷ","url":"http://music.163.com/song/media/outer/url?id=850726.mp3","cover":"http://p2.music.126.net/K2o-un7Cs33aCw458uTlbA==/109951166031891167.jpg?param=130y130","lrc":"lrc1.lrc","theme":"#ebd0c2"},{"name":"あのバンド","artist":"あすとらるTrip","url":"http://music.163.com/song/media/outer/url?id=1996323631.mp3","cover":"http://p2.music.126.net/oa0c9pVjoJ5aQU_NqvujuQ==/109951168039412955.jpg?param=130y130","lrc":"lrc1.lrc","theme":"#ebd0c2"},{"name":"春嵐","artist":"john / 初音ミク","url":"http://music.163.com/song/media/outer/url?id=1456486939.mp3","cover":"http://p2.music.126.net/lvnDZPuvFZOUcbXy-mfqig==/109951169459991843.jpg?param=130y130","lrc":"lrc1.lrc","theme":"#ebd0c2"},{"name":"神曲","artist":"R Sound Design / 初音ミク","url":"http://music.163.com/song/media/outer/url?id=1459024210.mp3","cover":"http://p2.music.126.net/3dnQJhMAjDBnX1WZPN9GWg==/109951165098626438.jpg?param=130y130","lrc":"lrc1.lrc","theme":"#ebd0c2"},{"name":"現在心行形","artist":"にほしか","url":"http://music.163.com/song/media/outer/url?id=2059789828.mp3","cover":"http://p2.music.126.net/R4Zi86Ico7ayKJZbKDrijw==/109951168705926330.jpg?param=130y130","lrc":"lrc1.lrc","theme":"#ebd0c2"}] || [],
+        fixed: isMobile ? true : (true || false),
+        autoplay: true || false,
+        loop: 'all' || 'all',
+        order: 'random' || 'list',
+        preload: '' || 'auto',
+        volume: null || 0.7,
+        mutex: null || true,
+        listFolded: null || false,
+        lrcType: null || 0,
+      });
+    </script>
   
-<script src="https://npm.webcache.cn/meting@2.0.1/dist/Meting.min.js" integrity="sha384-ASVlpKF80A22OXTK3tfEjZm1EL6uFMKIC4p8+0maanw1S&#x2F;IyB+Y4JG+ZDU7GpKE8" crossorigin="anonymous"></script>
+
 
 
 
