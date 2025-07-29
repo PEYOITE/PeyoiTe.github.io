@@ -123,6 +123,12 @@
   font-family: "iconfont";
   content: "\e630";
 }
+.icon-bilibili:before {
+  content: "\e603";
+}
+.icon-steam:before {
+  content: "\e624";
+}
 .sidebar-btn-wrapper .sidebar-toc-btn:before {
   font-family: "iconfont";
   content: "\e633";

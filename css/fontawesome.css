@@ -121,6 +121,12 @@
   font-family: var(--font-icon);
   content: "\f105";
 }
+.icon-bilibili:before {
+  content: "\e3d9";
+}
+.icon-steam:before {
+  content: "\f1b6";
+}
 .sidebar-btn-wrapper .sidebar-toc-btn:before {
   font-family: var(--font-icon);
   content: "\f0e8";
