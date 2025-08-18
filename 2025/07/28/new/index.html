@@ -60,12 +60,6 @@
   <link rel="preload" as="style" onload="this.onload&#x3D;null;this.rel&#x3D;&#39;stylesheet&#39;" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" integrity="sha384-IfxC36XL&#x2F;toUyJ939C73PcgMuRzAZuIzZxE38drsmO5p6jD7ei+Zx&#x2F;1oA&#x2F;0l8ysE" crossorigin="anonymous">
   
   
-    
-      
-<link rel="stylesheet" href="https://npm.webcache.cn/@waline/client@2.15.8/dist/waline.css" integrity="sha384-vltfZtesCdl6NYVcFVcjEaIi5RpNvZe9t7fXvq8twVtcoy+Ub9QgnxUYJmwOhYCK" crossorigin="anonymous">
-
-    
-  
   
   
     
@@ -364,19 +358,14 @@
       
       
       
-      
         <a data-aos="zoom-in" href="/2025/07/28/new/#comments" class="article-comment-link">
-          <span class="post-comments-count waline-comment-count" data-path="/2025/07/28/new/" itemprop="commentCount"></span>
+          <span class="post-comments-count valine-comment-count" data-xid="/2025/07/28/new/" itemprop="commentCount"></span>
           留言
         </a>
       
       
       
       
-        <span data-aos="zoom-in" class="article-visitor-link">
-          <span class="waline-pageview-count" data-path="/2025/07/28/new/">0</span>
-          <em class="post-meta-item-text">阅读量</em>
-        </span>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E6%97%A0%E7%97%85%E5%91%BB%E5%90%9F/" rel="tag">无病呻吟</a></li></ul>
@@ -442,8 +431,8 @@
       <div class="comment-selector">
         <div class="comment-selector-wrap">
             
-            <div class="selector-item" data-selector="waline">
-              <span>waline</span>
+            <div class="selector-item" data-selector="valine">
+              <span>valine</span>
             </div>
             
         </div>
@@ -451,8 +440,8 @@
     </div>
     <div class="comment-content">
       
-        <div class="comment waline-comment" data-aos="fade-up"
-          id="waline-comment">
+        <div class="comment valine-comment" data-aos="fade-up"
+          id="valine-comment">
         </div>
       
     </div>
@@ -905,7 +894,7 @@
   var commentConfigKeys = ['valine', 'waline', 'twikoo', 'gitalk', 'giscus'];
   var commentConfig = {
     valine: {
-      enable: false,
+      enable: true,
       load: () => {
         const container = document.querySelector('.valine-comment');
         if (!container) return;
@@ -928,8 +917,8 @@
           if (window.Valine) {
             new Valine({
               el: '.valine-comment',
-              appId: "",
-              appKey: "",
+              appId: "EVltSG9fpT1LOjeBn9mKZb3O-MdYXbMMI",
+              appKey: "WmLmiZ1FGiygevSP4KFC0nhh",
               placeholder: "Just go go",
               pageSize: '10',
               avatar: 'mp',
@@ -947,7 +936,7 @@
       }
     },
     waline: {
-      enable: true,
+      enable: false,
       load: async () => {
         const container = document.querySelector('.waline-comment');
         if (!container) return;
@@ -962,7 +951,7 @@
 
         window.walineInstance = walineInit({
           el: '.waline-comment',
-          serverURL: 'https://main-project-hh1ki8a8e-peyoites-projects.vercel.app',
+          serverURL: 'your server url',
           lang: document.documentElement.lang || 'en',
           locale: {},
           emoji: ["https://unpkg.com/@waline/emojis@1.2.0/weibo","https://unpkg.com/@waline/emojis@1.2.0/alus","https://unpkg.com/@waline/emojis@1.2.0/bilibili","https://unpkg.com/@waline/emojis@1.2.0/qq","https://unpkg.com/@waline/emojis@1.2.0/tieba","https://unpkg.com/@waline/emojis@1.2.0/tw-emoji"],
